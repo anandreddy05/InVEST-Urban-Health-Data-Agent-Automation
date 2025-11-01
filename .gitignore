@@ -1,0 +1,7 @@
+.env
+outputs/
+temp/
+*.tif
+*.png
+*.zip
+__pycache__/

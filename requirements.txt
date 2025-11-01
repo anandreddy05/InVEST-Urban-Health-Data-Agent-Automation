@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+requests
+rasterio
+geopandas
+shapely
+pyproj
+numpy
+google-auth
+earthengine-api
+geopy
+python-multipart
+python-dotenv
+langchain
+langchain_openai
