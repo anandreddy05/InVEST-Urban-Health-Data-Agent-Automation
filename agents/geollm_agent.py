@@ -21,7 +21,7 @@ class GeoExtraction(BaseModel):
 
 class GeoRequest(BaseModel):
     prompt: str
-    data_types: List[str] = Field(default_factory=lambda: ["land_cover", "tree_cover", "ndvi", "population"])
+    data_types: List[str] = Field(default_factory=lambda: ["land_cover", "tree_cover", "ndvi", "population", "basemap"])
 
 
 class GeoResponse(BaseModel):
@@ -57,6 +57,7 @@ Available Data Types:
 - tree_cover: Tree Canopy Cover data  
 - ndvi: Normalized Difference Vegetation Index
 - population: Population density data
+- basemap: Satellite imagery (true-color RGB)
 
 Extract the city/region name and list the requested data types. 
 If no specific types are mentioned, include all available types.
@@ -98,7 +99,8 @@ Return the result **strictly** as a JSON object:
             "land_cover": ["land cover", "land use", "lulc", "nlcd", "landcover"],
             "tree_cover": ["tree cover", "tree canopy", "canopy", "forest", "trees"],
             "ndvi": ["ndvi", "vegetation", "greenness", "vegetation index"],
-            "population": ["population", "pop", "people", "demographic", "census"]
+            "population": ["population", "pop", "people", "demographic", "census"],
+            "basemap": ["basemap", "satellite", "imagery", "map", "rgb", "true color", "aerial"]
         }
         
         for data_type, keywords in keyword_mapping.items():
